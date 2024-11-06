@@ -39,8 +39,42 @@ body {
   padding: 90px 0;
 }
 
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: var(--lightgray);
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--darkblue);
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+
 @media screen and (max-width: 1550px) {
   .content {
     width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .content {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+}
+
+@media screen and (max-width: 960px) {
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;
+  }
+
+  .swiper-pagination {
+    display: none;
   }
 }
