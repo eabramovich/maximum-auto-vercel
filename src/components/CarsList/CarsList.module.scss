@@ -1,0 +1,162 @@
+.carFinder {
+  display: flex;
+  gap: 60px;
+  padding-top: 75px;
+
+  .filter {
+
+    .groupTitle {
+      font-size: 28px;
+      margin: 0 0 25px;
+    }
+
+    .group {
+      list-style-type: none;
+      margin: 0 0 35px;
+      border-bottom: 2px solid #9AA7AD;
+      padding: 0 0 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 500px;
+
+
+      .param {
+        padding: 8px 20px;
+        border: 2px solid #010C13;
+        border-radius: 8px;
+        color: #000;
+        font-family: var(--font-inter);
+        font-weight: 400;
+        font-size: 16px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .paramActive {
+        background-color: #A9A9A9;
+      }
+    }
+
+    .resetButton {
+      width: 100%;
+      background: white;
+      height: 80px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: 2px solid var(--darkblue);
+      color: var(--darkblue);
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+
+  .carsList {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 42px;
+    margin: 0;
+    padding: 0;
+
+    .car {
+      width: 440px;
+      margin-bottom: 40px;
+
+      .image {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .brandName {
+        font-size: 32px;
+        line-height: 140%;
+        margin: 0 0 15px;
+      }
+
+      .params {
+        color: var(--gray);
+        font-weight: 500;
+        font-size: 28px;
+        margin: 0 0 25px;
+      }
+
+
+    }
+  }
+}
+
+
+@media screen and (max-width: 1550px) {
+  .carFinder {
+    gap: 40px;
+
+    .filter {
+
+      .group {
+        width: 420px;
+      }
+
+      .resetButton { 
+        font-size: 30px;
+      }
+
+
+    }
+
+    .carsList {
+      column-gap: 20px;
+
+      .car {
+        width: 360px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .carFinder {
+    gap: 40px;
+    flex-flow: column;
+    padding-top: 30px;
+
+    .filter {
+
+      .group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border: none;
+        .param {
+          padding: 4px 10px;
+          font-size: 12px;
+        }
+      }
+
+      .resetButton { 
+        font-size: 30px;
+      }
+
+
+    }
+
+    .carsList {
+      column-gap: 20px;
+
+      .car {
+        width: 100%;
+        margin-bottom: 30px;
+
+        .brandName {
+          font-size: 16px;
+        }
+
+        .params {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
