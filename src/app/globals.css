@@ -1,3 +1,5 @@
+@import 'normalize.css';
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -7,30 +9,20 @@
   --red: #CA0100;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
   font-family: var(--font-montserrat);
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 .page {
   max-width: 1920px;
   min-width: 320px;
   margin: auto;
+}
+
+@media (max-width: 1240px) {
+  .hide-on-mobile {
+    display: none;
+  }
 }
 
 .content {
